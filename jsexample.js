@@ -1,30 +1,43 @@
 /*Tipos de datos:
-String (cadena): va entre "" o con '' 
-Number
-Boolean o buleanos: son 0 y 1 pero lo traducimos como true y false
-Array o areglo: es una lista. Los elementos tienen como "posiciones"
+-String (cadena): va entre "" o con '' 
+-Number:sirve para neteros y decimales 
+-Boolean o buleanos: son 0 y 1 pero lo traducimos como true y false
+-Array o areglo: es una lista. Los elementos tienen como "posiciones" almacenan multiples valores en una sola variable.
+Este tipo de datos es llamado "primitivos" solo pueden contener una cosa.
 
-variables: son nombres que le damos a ciertos tipos de datos para almacenarlos en la pc para luego reutilizarlos 
+Objetos:almacenan colecciones de datos. Se escriben como pares de nombre:valor 
+
+
+Variables: son nombres que le damos a ciertos tipos de datos para almacenarlos en la pc para luego reutilizarlos.
+Se usa la palabra reservada var
 
 JS tiene REGLAS:
--Las variables no pueden comenzarcon un numero o con caracteres cualquiera, los unicos que soporta son $ o _ 
+-Las variables no pueden comenzar con un número o con caracteres cualquiera, los unicos que soporta son $ o _ 
 -Tratar de ser lo mas descriptivo con las variables 
-CamelCase: cada palabra comienza con mayuscula, es lo mas usual,pero tambien se puedeencontrar con _
+CamelCase: cada palabra comienza con mayuscula, es lo mas usual, pero tambien se puedeencontrar con _
 -No repetir nombre de las variables
 let usuario="Cass";
 usuario= "Cassy"; /* Si quiero cambiar nombre a la variable NO coloco let de vuelta */
-let usuario="Cass"
-usuario="Cassy"
+// let usuario="Cass"  ----Acá estoy declarando la variable----
+// usuario="Cassy" aca le estoy dando un valor.  La puedo declarar y luego asignarle un valor(Cassy) en lineas diferentes o puedo hacerlo en una sola linea(let usuario = "Cassy")
+let usuario="Cassy";
 let apellido="perez";
-let nombrecompleto= usuario+ " " + apellido; /* esto se llama concatenacion, no es una suma en si, porque estamos uniendo 2 cadenas
+let nombrecompleto= usuario+ " " + apellido;
+/*Otro ejemplo con strings + number*/ 
+var numeroUno="10";
+var numeroDos=10;
+var suma = numeroUno + numeroDos;
+console.log(suma); /* esto se llama concatenacion, no es una suma en si, porque estamos uniendo 2 cadenas
 Si quiero separar con un espacio, coloco " " (poner un espacio entre comillas) entre cada variable, mas +, es como si sumara nombre + espacio en blanco + apellidos */
 console.log(usuario)
-console.log(nombrecompleto); /* Para llamar a la variable, en el consolelog va sin comillas  */
+console.log(nombrecompleto);
+console.log(typeof(usuario)); /*Esto me muestra que tipo de dato es, en este caso un string */
+/* Para llamar a la variable, en el consolelog va sin comillas  */
 
 /* Para describir constantes,algun valor que no vaya a cambiar, ejemplo pi */
 const pi=3.14; /* va sin comillas porque es un number */
 console.log(pi)
-/* pi=100 como es constante, me da error en la consola si trato de cambiarlo */
+/* pi=100 como es constante, me da error en la consola si trato de cambiarlo. No la puedo re declarar */
 
 let number1=30;
 let number2=10;
@@ -106,7 +119,7 @@ function darBienvenida () {}/* <----Esto nunca va en el codigo??. Si borro linea
   Operadores lógicos : &&(and)  devuele true solo si ambos operadores son verdaderos, 
   ||(or) devuelve true si al menos uno de los operadores es verdadero
 
-  ! (not) es la negacion, invierte el valor booleano de la variable. Si era true devuelve false. Y si era false devuelve true.
+  ! (not) es la negación, invierte el valor booleano de la variable. Si era true devuelve false. Y si era false devuelve true.
   
   */
  let variable1= true;
@@ -132,8 +145,8 @@ function darBienvenida () {}/* <----Esto nunca va en el codigo??. Si borro linea
 console.log('nu mayor que 10');  
    }
  
-   /* Bucles: para ejecutar una instruccion o varias instruc varias veces
-   El bucle for es el mas utilizado y lo usamos cuando sabemos la cantidad de veces que vamos a repetir la intruccion */
+   /* Bucles: para ejecutar una instrucción o varias instruccciones varias veces
+   El bucle for es el más utilizado y lo usamos cuando sabemos la cantidad de veces que vamos a repetir la intruccion */
    
    let nomUsers= ['Hola Bienvenido']
     for (let i=0; i<10;i++){ /* Al asignar el ++ incrementamos el valor de la variable en 1 */
